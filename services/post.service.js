@@ -2,7 +2,7 @@ const Post = require("../models/post.model");
 
 class PostService {
   async fetchOne(postId) {
-    return Post.findById(postId).where("deleted").equals(false);
+    return Post.findOne({ $and: [{ _id: postId }, { deleted: false }] });
   }
   async fetchAll() {
     return Post.find({ deleted: false }).sort({ createdAt: "desc" });

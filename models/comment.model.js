@@ -14,6 +14,7 @@ const commentSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "Post",
     },
+    deleted: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

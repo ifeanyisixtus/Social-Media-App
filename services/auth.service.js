@@ -25,7 +25,6 @@ class AuthService {
   async login(newUser) {
     const { email, password } = newUser;
 
-    // const user = await User.findOne({ $or: [{ email }, { username }] });
     const user = await User.findOne({ email });
 
     if (user) {
