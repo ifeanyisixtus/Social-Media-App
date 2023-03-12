@@ -4,7 +4,9 @@ const { generateRandomAvatar } = require("../utils/generateAvatar");
 
 class UserService {
   async fetchUser(id) {
-    return User.findById(id).where("deleted").equals(false).select("-password");
+    return User.findOne({ $and: [{ _id: id }, { deleted: false }] }).select(
+      "-password"
+    );
   }
 
   async fetchAll() {

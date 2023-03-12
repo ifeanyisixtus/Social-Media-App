@@ -25,7 +25,7 @@ const fetchSingleUser = async (req, res) => {
         .json({ success: true, user: { ...user._doc, image } });
     }
 
-    return res.status(401).json({ message: "user not found" });
+    return res.status(401).json({ message: "user does not exist" });
   } catch (error) {
     return res.status(401).json({ message: error.message });
   }
