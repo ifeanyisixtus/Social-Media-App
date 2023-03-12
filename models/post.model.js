@@ -1,18 +1,15 @@
 const mongoose = require("mongoose");
+const { Types } = mongoose;
 
 const postSchema = new mongoose.Schema(
   {
-    userId: {
+    owner: {
       type: Types.ObjectId,
       ref: "User",
     },
     title: { type: String },
     description: { type: String, required: true },
-
-    email: { type: String, required: true, unique },
-    password: { type: String, required: true, minLength: 8 },
     deleted: { type: Boolean, default: false },
-    avatar: { type: String, required: true },
   },
   { timestamps: true }
 );

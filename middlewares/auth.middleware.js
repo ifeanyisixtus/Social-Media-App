@@ -8,16 +8,15 @@ const authGuard = async (req, res, next) => {
 
   //   check if jwt exists and verify it is valid
   if (token) {
-    try {
-      await jwt.verify(token, authSecret);
+    jwt.verify(token, authSecret, (err, user) => {
+      if (err) return res.status(403).json({ error: "unable to login" });
+      req.user = user;
       next();
-    } catch (error) {
-      next(error);
-    }
-  } else {
-    return res.status(401).json({
-      error: "unauthorized to access route",
     });
+  } else {
+    return res
+      .status(401)
+      .json({ error: "unauthorized to access route. please login" });
   }
 };
 

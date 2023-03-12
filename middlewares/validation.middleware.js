@@ -1,4 +1,5 @@
 const loginSchema = require("../validations/loginSchema");
+const postSchema = require("../validations/postSchema");
 const signupSchema = require("../validations/signupSchema");
 
 const validateLogin = async (req, res, next) => {
@@ -25,7 +26,20 @@ const validateSignup = async (req, res, next) => {
   }
 };
 
+const validatePost = async (req, res, next) => {
+  try {
+    await postSchema.validateAsync({
+      ...req.body,
+    });
+
+    next();
+  } catch (err) {
+    return res.status(401).json({ error: err.message });
+  }
+};
+
 module.exports = {
   validateLogin,
   validateSignup,
+  validatePost,
 };
