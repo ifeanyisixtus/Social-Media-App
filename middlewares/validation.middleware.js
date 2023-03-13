@@ -5,9 +5,12 @@ const signupSchema = require("../validations/signupSchema");
 
 const validateLogin = async (req, res, next) => {
   try {
-    await loginSchema.validateAsync({
-      ...req.body,
-    });
+    await loginSchema.validateAsync(
+      {
+        ...req.body,
+      },
+      { abortEarly: false }
+    );
 
     next();
   } catch (err) {
@@ -17,9 +20,12 @@ const validateLogin = async (req, res, next) => {
 
 const validateSignup = async (req, res, next) => {
   try {
-    await signupSchema.validateAsync({
-      ...req.body,
-    });
+    await signupSchema.validateAsync(
+      {
+        ...req.body,
+      },
+      { abortEarly: false }
+    );
 
     next();
   } catch (err) {
@@ -29,9 +35,12 @@ const validateSignup = async (req, res, next) => {
 
 const validatePost = async (req, res, next) => {
   try {
-    await postSchema.validateAsync({
-      ...req.body,
-    });
+    await postSchema.validateAsync(
+      {
+        ...req.body,
+      },
+      { abortEarly: false }
+    );
 
     next();
   } catch (err) {
