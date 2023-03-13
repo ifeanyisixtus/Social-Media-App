@@ -44,7 +44,7 @@
       "parentId": null,
       "modified": 1678656644209,
       "created": 1678655718078,
-      "name": "my-spec.yaml",
+      "name": "Social Media Nodejs Api",
       "description": "**PostIt** is a social media api with the basic functionality of a social media application",
       "scope": "design",
       "_type": "workspace"
