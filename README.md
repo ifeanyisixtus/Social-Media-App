@@ -46,3 +46,9 @@ This is web app like twitter. here a user can createpostit (like in twitter), a 
 - When returning post-its they should be sorted by newest first.that is newly created post-its should come first and the old ones last which i implemented
 - Decide what you will do with the deleted post-its ans in your readme, explain what you later did which i made sure i explained it in details
 - I made sure i implemented the avatars features
+
+### How i Implemented Soft Delete
+
+- Created a boolean field called _deleted_ in the models.
+- Updates the field to true once a user sends a delete request
+- And lastly fetch data where _deleted_ is false.
