@@ -7,7 +7,7 @@ const AuthGuard = require("../middlewares/auth.middleware");
 const router = Router();
 
 router.use("/auth", authRoute);
-router.use("/users", AuthGuard, userRoute);
+router.use("/users", userRoute);
 router.use("/posts", AuthGuard, postRoute);
 
 module.exports = router;
