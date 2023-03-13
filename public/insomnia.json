@@ -44,7 +44,7 @@
       "parentId": null,
       "modified": 1678656644209,
       "created": 1678655718078,
-      "name": "Social Media Nodejs Api",
+      "name": "my-spec.yaml",
       "description": "**PostIt** is a social media api with the basic functionality of a social media application",
       "scope": "design",
       "_type": "workspace"
@@ -238,7 +238,7 @@
       "created": 1678656336013,
       "url": "{{ _.baseUrl }}/users",
       "name": "Fetch Users",
-      "description": "Fetch all users from database\n\n\n```response:200\n{\n\t\"success\": true,\n\t\"users\": [\n\t\t{\n\t\t\t\"_id\": \"640d8f717e83d43082fe325d\",\n\t\t\t\"username\": \"mark\",\n\t\t\t\"email\": \"markjames@gmail.com\",\n\t\t\t\"deleted\": false,\n\t\t\t\"avatar\": \"https://api.dicebear.com/5.x/icons/svg?seed=markjames-vzx6r-gmail-n9rbx-com&size=200&radius=50\",\n\t\t\t\"createdAt\": \"2023-03-12T08:38:09.025Z\",\n\t\t\t\"updatedAt\": \"2023-03-12T08:38:09.025Z\",\n\t\t\t\"__v\": 0\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"640e4a2aa9b0de0afc2adb26\",\n\t\t\t\"username\": \"zubix\",\n\t\t\t\"email\": \"attahsixtus6@gmail.com\",\n\t\t\t\"deleted\": false,\n\t\t\t\"avatar\": \"https://api.dicebear.com/5.x/initials/svg?seed=attahsixtus6-koli1-gmail-24x36-com&size=200&radius=50\",\n\t\t\t\"createdAt\": \"2023-03-12T21:54:50.325Z\",\n\t\t\t\"updatedAt\": \"2023-03-12T21:54:50.325Z\",\n\t\t\t\"__v\": 0\n\t\t}\n\t]\n}\n```\n\n```response:401\n{\n\t\"error\": \"unauthorized to access route. please login\"\n}\n```",
+      "description": "Fetch all users from database\n\n\n```response:200\n{\n\t\"success\": true,\n\t\"users\": [\n\t\t{\n\t\t\t\"_id\": \"640d8f717e83d43082fe325d\",\n\t\t\t\"username\": \"mark\",\n\t\t\t\"email\": \"markjames@gmail.com\",\n\t\t\t\"deleted\": false,\n\t\t\t\"avatar\": \"https://api.dicebear.com/5.x/icons/svg?seed=markjames-vzx6r-gmail-n9rbx-com&size=200&radius=50\",\n\t\t\t\"createdAt\": \"2023-03-12T08:38:09.025Z\",\n\t\t\t\"updatedAt\": \"2023-03-12T08:38:09.025Z\",\n\t\t\t\"__v\": 0\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"640e4a2aa9b0de0afc2adb26\",\n\t\t\t\"username\": \"peter\",\n\t\t\t\"email\": \"attahsixtus6@gmail.com\",\n\t\t\t\"deleted\": false,\n\t\t\t\"avatar\": \"https://api.dicebear.com/5.x/initials/svg?seed=attahsixtus6-koli1-gmail-24x36-com&size=200&radius=50\",\n\t\t\t\"createdAt\": \"2023-03-12T21:54:50.325Z\",\n\t\t\t\"updatedAt\": \"2023-03-12T21:54:50.325Z\",\n\t\t\t\"__v\": 0\n\t\t}\n\t]\n}\n```\n\n```response:401\n{\n\t\"error\": \"unauthorized to access route. please login\"\n}\n```",
       "method": "GET",
       "body": {},
       "parameters": [],
@@ -265,7 +265,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\"email\": \"attahsixtus6@gmail.com\", \"password\": \"12345678\", \"username\": \"zubix\"}"
+        "text": "{\"email\": \"attahsixtus6@gmail.com\", \"password\": \"12345678\", \"username\": \"peter\"}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -326,7 +326,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\"email\": \"kingsleyaham6@gmail.com\", \"password\": \"12345678\"}"
+        "text": "{\"email\": \"attahsixtus6@gmail.com\", \"password\": \"1234567890\"}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
